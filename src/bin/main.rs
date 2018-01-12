@@ -7,14 +7,6 @@ use std::fs::File;
 use std::thread;
 use std::time::Duration;
 
-//use std::env;
-
-// fn main() {
-//     let args: Vec<String> = env::args().collect();
-//     println!("path {}", args[0]);
-//     println!("Hello {:?} {:?}",args.len() - 1, &args[1..]);
-// }
-
 fn main() {
     let listener = TcpListener::bind("127.0.0.1:8080").unwrap();
     let pool = ThreadPool::new(4);
